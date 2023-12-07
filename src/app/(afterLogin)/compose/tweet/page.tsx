@@ -1,8 +1,7 @@
+import Home from "@/app/(afterLogin)/home/page";
 
-export default function Home() {
-  return (
-    <main>
-      TWEET?
-    </main>
-  )
+export default function Page() {
+    return (
+        <Home/>
+    );
 }
