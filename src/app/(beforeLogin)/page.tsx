@@ -1,10 +1,11 @@
-import Image from 'next/image'
-import styles from '../page.module.css'
-import Link from 'next/link'
-import LogoImg from '../../../public/zlogo.png'
+import { auth } from '@/auth'
 import Main from './_component/Main'
 
-export default function Home() {
+export default async function Home() {
+  const session = await auth()
+  if(session?.user) {
+    return null
+  }
   return (
     <>
       <Main />
